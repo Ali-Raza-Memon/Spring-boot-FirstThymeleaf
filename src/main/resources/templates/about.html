@@ -8,7 +8,7 @@
       <h1>This is about page of Thymeleaf</h1>
 
 
-      <h1>Name of the owner is <span th:text="${name}"></span></h1>
+      <h1>Name of the owner is <span th:text=" ${ #strings.toUpperCase(name) } "></span></h1>
 
       <h2>Date and Time is <span th:text="${currentDate}"></span></h2>
 
