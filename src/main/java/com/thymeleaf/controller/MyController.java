@@ -5,6 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.Date;
+import java.util.List;
 
 @Controller
 public class MyController {
@@ -18,4 +19,18 @@ public class MyController {
         System.out.println("Inside about handler");
         return "about";
     }
+
+
+
+    @GetMapping("/list")
+    public String nameOfList(Model m){
+
+        List<String> names = List.of("Yaseen","Kamran","Sohail","Zahid","Abrar");
+        m.addAttribute("names",names);
+
+
+
+        return "iterate";
+    }
+
 }
